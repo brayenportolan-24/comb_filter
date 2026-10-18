@@ -11,6 +11,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 #define QUANTIDADE_AMOSTRA 400
+
 #define BLOCO_AMOSTRA      (QUANTIDADE_AMOSTRA / 2)
 #define ADC_MIDPOINT       2048.0f
 #define DAC_MAX_VALUE      4095
