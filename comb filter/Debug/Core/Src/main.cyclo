@@ -1,8 +1,7 @@
-../Core/Src/main.c:32:13:comb_filter_init	2
-../Core/Src/main.c:41:17:comb_filter_process	4
-../Core/Src/main.c:82:13:process_audio_block	2
-../Core/Src/main.c:95:5:main	5
-../Core/Src/main.c:154:6:SystemClock_Config	3
-../Core/Src/main.c:196:6:HAL_ADC_ConvHalfCpltCallback	2
-../Core/Src/main.c:204:6:HAL_ADC_ConvCpltCallback	2
-../Core/Src/main.c:214:6:Error_Handler	1
+../Core/Src/main.c:47:6:func_filtro	3
+../Core/Src/main.c:71:5:main	1
+../Core/Src/main.c:113:6:SystemClock_Config	3
+../Core/Src/main.c:152:6:HAL_ADC_ConvHalfCpltCallback	2
+../Core/Src/main.c:159:6:HAL_ADC_ConvCpltCallback	2
+../Core/Src/main.c:167:6:HAL_UART_RxCpltCallback	2
+../Core/Src/main.c:182:6:Error_Handler	1

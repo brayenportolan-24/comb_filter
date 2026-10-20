@@ -286,7 +286,7 @@ void SystemInit_ExtMemCtl(void)
   /* Enable GPIOC, GPIOD, GPIOE, GPIOF, GPIOG, GPIOH and GPIOI interface clock */
   RCC->AHB1ENR |= 0x000001F8;
 
-  /* Delay after an RCC peripheral clock enabling */
+  /* amostra_atraso after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOCEN);
   
   /* Connect PDx pins to FMC Alternate function */
@@ -364,7 +364,7 @@ void SystemInit_ExtMemCtl(void)
 /*-- FMC Configuration -------------------------------------------------------*/
   /* Enable the FMC interface clock */
   RCC->AHB3ENR |= 0x00000001;
-  /* Delay after an RCC peripheral clock enabling */
+  /* amostra_atraso after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FMCEN);
 
   FMC_Bank5_6->SDCR[0] = 0x000019E4;
@@ -379,7 +379,7 @@ void SystemInit_ExtMemCtl(void)
     tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
   }
 
-  /* Delay */
+  /* amostra_atraso */
   for (index = 0; index<1000; index++);
   
   /* PALL command */
@@ -460,7 +460,7 @@ void SystemInit_ExtMemCtl(void)
       clock */
   RCC->AHB1ENR |= 0x000001F8;
 #endif /* STM32F446xx */  
-  /* Delay after an RCC peripheral clock enabling */
+  /* amostra_atraso after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOCEN);
   
 #if defined(STM32F446xx)
@@ -567,7 +567,7 @@ void SystemInit_ExtMemCtl(void)
 /*-- FMC Configuration -------------------------------------------------------*/
   /* Enable the FMC interface clock */
   RCC->AHB3ENR |= 0x00000001;
-  /* Delay after an RCC peripheral clock enabling */
+  /* amostra_atraso after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FMCEN);
 
   /* Configure and enable SDRAM bank1 */
@@ -587,7 +587,7 @@ void SystemInit_ExtMemCtl(void)
     tmpreg = FMC_Bank5_6->SDSR & 0x00000020; 
   }
 
-  /* Delay */
+  /* amostra_atraso */
   for (index = 0; index<1000; index++);
   
   /* PALL command */
@@ -647,7 +647,7 @@ void SystemInit_ExtMemCtl(void)
 /*-- GPIOs Configuration -----------------------------------------------------*/
    /* Enable GPIOD, GPIOE, GPIOF and GPIOG interface clock */
   RCC->AHB1ENR   |= 0x00000078;
-  /* Delay after an RCC peripheral clock enabling */
+  /* amostra_atraso after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIODEN);
   
   /* Connect PDx pins to FMC Alternate function */
@@ -703,7 +703,7 @@ void SystemInit_ExtMemCtl(void)
   RCC->AHB3ENR         |= 0x00000001;
 
 #if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)
-  /* Delay after an RCC peripheral clock enabling */
+  /* amostra_atraso after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FMCEN);
   /* Configure and enable Bank1_SRAM2 */
   FMC_Bank1->BTCR[2]  = 0x00001011;
@@ -711,7 +711,7 @@ void SystemInit_ExtMemCtl(void)
   FMC_Bank1E->BWTR[2] = 0x0fffffff;
 #endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */ 
 #if defined(STM32F469xx) || defined(STM32F479xx)
-  /* Delay after an RCC peripheral clock enabling */
+  /* amostra_atraso after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FMCEN);
   /* Configure and enable Bank1_SRAM2 */
   FMC_Bank1->BTCR[2]  = 0x00001091;
@@ -720,7 +720,7 @@ void SystemInit_ExtMemCtl(void)
 #endif /* STM32F469xx || STM32F479xx */
 #if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx)\
    || defined(STM32F412Zx) || defined(STM32F412Vx)
-  /* Delay after an RCC peripheral clock enabling */
+  /* amostra_atraso after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FSMCEN);
   /* Configure and enable Bank1_SRAM2 */
   FSMC_Bank1->BTCR[2]  = 0x00001011;
